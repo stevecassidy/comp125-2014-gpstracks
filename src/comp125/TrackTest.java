@@ -28,14 +28,14 @@ public class TrackTest {
         Track tr = new Track("data/small-sample.csv");
         assertEquals("data/small-sample.csv", tr.getFilename());
         assertEquals(0.2043, tr.getDistance(), 0.001);
-        assertEquals("2014-08-22T20:22:26Z", tr.getDate());
+        assertEquals("2014-08-22T20:22:26Z", tr.getTimestamp());
         assertEquals(2.6, tr.getElevationGain(), 0.001);
         
         
         Track tr2 = new Track("data/sample.csv");
         assertEquals("data/sample.csv", tr2.getFilename());
         assertEquals(16.605, tr2.getDistance(), 0.001);
-        assertEquals("2014-08-22T20:18:23Z", tr2.getDate());
+        assertEquals("2014-08-22T20:18:23Z", tr2.getTimestamp());
         assertEquals(122.4, tr2.getElevationGain(), 0.001);
         
     }

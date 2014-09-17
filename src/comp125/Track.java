@@ -20,7 +20,7 @@ public class Track {
     	
     }
     
-    public String getDate() {
+    public String getTimestamp() {
     	
     }
     

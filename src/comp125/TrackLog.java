@@ -25,7 +25,7 @@ public class TrackLog {
     }
     
 
-    public void sortDate() {
+    public void sortTimestamp() {
         
     }
     

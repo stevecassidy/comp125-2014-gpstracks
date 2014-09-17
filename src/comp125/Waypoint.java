@@ -17,7 +17,7 @@ public class Waypoint {
 
     }
     
-    public String getDate() {
+    public String getTimestamp() {
 
     }
 

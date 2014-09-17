@@ -14,7 +14,7 @@ public class WaypointTest {
         Waypoint wp = new Waypoint(line);
         
         /* validate using the getter methods */
-        assertEquals("2014-08-22T20:18:44Z", wp.getDate());
+        assertEquals("2014-08-22T20:18:44Z", wp.getTimestamp());
         assertEquals(-33.7940910, wp.getLatitude(), 0.001);
         assertEquals(151.0470420, wp.getLongitude(), 0.001);
         assertEquals(-2.2, wp.getElevation(), 0.001);

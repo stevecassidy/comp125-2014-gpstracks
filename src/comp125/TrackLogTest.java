@@ -32,7 +32,7 @@ public class TrackLogTest {
 	}
 
 	@Test
-	public void testSortTitle() {
+	public void testSortTimestamp() {
 		fail("Not yet implemented");
 	}
 
