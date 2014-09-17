@@ -20,10 +20,6 @@ public class Waypoint {
     public String getTimestamp() {
 
     }
-
-    public boolean equals(Waypoint wp) {
-        
-    }
     
     public Waypoint(final String wstring) throws GPSException {
 

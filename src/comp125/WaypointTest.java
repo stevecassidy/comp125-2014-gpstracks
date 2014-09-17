@@ -32,25 +32,6 @@ public class WaypointTest {
         @SuppressWarnings("unused")
         Waypoint wp = new Waypoint(line);
     }
-    
-    @Test
-    public void test_waypoint_equality() throws GPSException {
-
-        Waypoint wp1 =  new Waypoint("2014-08-22T20:22:28Z, -33.7972680, 151.0454740,  -28.6");
-        Waypoint wp1a = new Waypoint("2014-08-22T20:22:28Z, -33.7972680, 151.0454740,  -28.6");
-        Waypoint wp2 =  new Waypoint("2014-08-22T20:22:28Z, -33.7972685, 151.0454745,  -28.6");
-        Waypoint wp3 =  new Waypoint("2014-08-22T20:40:43Z, -33.7972680, 151.0454740,  -28.6");
-        Waypoint wp4 =  new Waypoint("2014-08-22T20:22:29Z, -33.8311800, 151.0709390,  -61.8");
-        Waypoint wp5 =  new Waypoint("2014-08-22T20:22:28Z, -33.7972680, 151.0454740,  -12.3");
-       
-        assertEquals(true, wp1.equals(wp1)); /* equal to itself */
-        assertEquals(true, wp1.equals(wp1a));/* equal because identical data */
-        assertEquals(true, wp1.equals(wp2)); /* equal because close and same timestamp */
-
-        assertEquals(false, wp1.equals(wp3)); /* not equal, different time */
-        assertEquals(false, wp1.equals(wp4)); /* not equal, too far away */
-        assertEquals(false, wp1.equals(wp5)); /* not equal, different elevation */
-    }
 
     
     /*
