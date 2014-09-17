@@ -10,3 +10,7 @@ average speed. You will also write code to handle a collection of tracks for a u
 them to see their longest trips or those with the most elevation gain.
 
 For full details see the PDF handout for the assignment.
+
+You can download this starter pack from github as a zip file or if you want to start experimenting with 
+version control software, install git and clone the repository for yourself.  
+See [the github help pages](https://help.github.com/) for some help getting started with git.
