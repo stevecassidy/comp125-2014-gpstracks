@@ -12,7 +12,7 @@ public class TrackTest {
      * Create a track from a csv file contianing waypoints
      */
     @Test
-    public void test_create_track_waypoint_csv() throws FileNotFoundException {
+    public void test_create_track_waypoint_csv() throws FileNotFoundException, GPSException {
         
         Track tr = new Track("data/small-sample.csv");
         assertEquals(20, tr.size());
@@ -23,7 +23,7 @@ public class TrackTest {
     }
     
     @Test
-    public void test_track_getters() throws FileNotFoundException {
+    public void test_track_getters() throws FileNotFoundException, GPSException {
         
         Track tr = new Track("data/small-sample.csv");
         assertEquals("data/small-sample.csv", tr.getFilename());
@@ -41,7 +41,7 @@ public class TrackTest {
     }
     
     @Test
-    public void test_add_to_track() throws GPSException, FileNotFoundException  {
+    public void test_add_to_track() throws  FileNotFoundException, GPSException  {
         
         Track tr = new Track("data/small-sample.csv");
         assertEquals(20, tr.size());
