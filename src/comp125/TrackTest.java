@@ -22,6 +22,20 @@ public class TrackTest {
         assertEquals(1000, tr2.size());
     }
     
+    @Test(expected=GPSException.class)
+    public void test_create_track_waypoint_csv_bad() throws GPSException, IOException {
+        
+        Track tr = new Track("data/badly-formed.csv");
+        
+    }
+    
+    @Test(expected=IOException.class)
+    public void test_create_track_waypoint_no_file() throws GPSException, IOException {
+        
+        Track tr = new Track("data/file-not-there.txt");
+        
+    }
+    
     @Test
     public void test_track_getters() throws IOException, GPSException {
         
