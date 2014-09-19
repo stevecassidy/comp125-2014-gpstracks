@@ -2,7 +2,7 @@ package comp125;
 
 import static org.junit.Assert.*;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class TrackTest {
      * Create a track from a csv file contianing waypoints
      */
     @Test
-    public void test_create_track_waypoint_csv() throws FileNotFoundException, GPSException {
+    public void test_create_track_waypoint_csv() throws IOException, GPSException {
         
         Track tr = new Track("data/small-sample.csv");
         assertEquals(20, tr.size());
@@ -23,7 +23,7 @@ public class TrackTest {
     }
     
     @Test
-    public void test_track_getters() throws FileNotFoundException, GPSException {
+    public void test_track_getters() throws IOException, GPSException {
         
         Track tr = new Track("data/small-sample.csv");
         assertEquals("data/small-sample.csv", tr.getFilename());
@@ -41,7 +41,7 @@ public class TrackTest {
     }
     
     @Test
-    public void test_add_to_track() throws  FileNotFoundException, GPSException  {
+    public void test_add_to_track() throws  IOException, GPSException  {
         
         Track tr = new Track("data/small-sample.csv");
         assertEquals(20, tr.size());
@@ -52,7 +52,7 @@ public class TrackTest {
     }
     
     @Test
-    public void test_closest_to() throws FileNotFoundException, GPSException {
+    public void test_closest_to() throws IOException, GPSException {
         
         Track tr = new Track("data/small-sample.csv");
         Waypoint wp1 = new Waypoint("2014-08-22T20:22:28Z, -33.7972580, 151.0454540,  -28.6");
@@ -65,7 +65,7 @@ public class TrackTest {
     }
     
     @Test
-    public void test_to_string() throws FileNotFoundException, GPSException {
+    public void test_to_string() throws IOException, GPSException {
         
         Track tr = new Track("data/small-sample.csv");
 

@@ -1,12 +1,12 @@
 package comp125;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 public class Track {
 
 
-    public Track(String filename) throws FileNotFoundException, GPSException {
+    public Track(String filename) throws IOException, GPSException {
 
     }
     

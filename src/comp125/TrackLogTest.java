@@ -2,14 +2,14 @@ package comp125;
 
 import static org.junit.Assert.*;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.junit.Test;
 
 public class TrackLogTest {
 
 	@Test
-	public void testTrackLogString() throws FileNotFoundException {
+	public void testTrackLogString() throws IOException {
 		// test that we can make a tracklog from a directory full of
 		// csv files
 		final String directory = "data";
