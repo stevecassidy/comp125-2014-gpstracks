@@ -1,7 +1,7 @@
 package comp125;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class TrackLog { 
     
@@ -11,7 +11,7 @@ public class TrackLog {
     
     
     /* Constructor to make a TrackLog from a directory of csv files */
-    public TrackLog(String directory) throws FileNotFoundException  {
+    public TrackLog(String directory) throws IOException  {
         super(); 
 
         tracks = new Track[MAX_TRACKS];
