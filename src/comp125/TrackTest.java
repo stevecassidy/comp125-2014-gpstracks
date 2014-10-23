@@ -19,40 +19,44 @@ public class TrackTest {
         
         /* longer track is truncated to 1000 waypoints */
         Track tr2 = new Track("data/sample.csv");
-        assertEquals(1000, tr2.size());
+        assertEquals(3858, tr2.size());
     }
     
-    @Test(expected=GPSException.class)
-    public void test_create_track_waypoint_csv_bad() throws GPSException, IOException {
-        
-        Track tr = new Track("data/badly-formed.csv");
-        
+    @Test
+    public void test_create_empty_track() {
+    	
+    	
+    	Track tr = new Track();
+    	
+    	assertEquals(0.0, tr.getDistance(), 0.001);
+    	assertEquals("", tr.getTimestamp());
+    	assertEquals(0.0, tr.getElevationGain(), 0.001);
     }
     
-    @Test(expected=IOException.class)
-    public void test_create_track_waypoint_no_file() throws GPSException, IOException {
-        
-        Track tr = new Track("data/file-not-there.txt");
-        
-    }
     
     @Test
     public void test_track_getters() throws IOException, GPSException {
         
         Track tr = new Track("data/small-sample.csv");
         assertEquals("data/small-sample.csv", tr.getFilename());
-        assertEquals(0.2043, tr.getDistance(), 0.001);
+        assertEquals(0.204, tr.getDistance(), 0.001);
         assertEquals("2014-08-22T20:22:26Z", tr.getTimestamp());
         assertEquals(2.6, tr.getElevationGain(), 0.001);
         
         
         Track tr2 = new Track("data/sample.csv");
         assertEquals("data/sample.csv", tr2.getFilename());
-        assertEquals(16.605, tr2.getDistance(), 0.001);
+        assertEquals(59.009, tr2.getDistance(), 0.001);
         assertEquals("2014-08-22T20:18:23Z", tr2.getTimestamp());
-        assertEquals(122.4, tr2.getElevationGain(), 0.001);
+        assertEquals(594.6, tr2.getElevationGain(), 0.001);
         
-    }
+        Track tr3 = new Track("data/offroad.csv");
+        assertEquals("data/offroad.csv", tr3.getFilename());
+        assertEquals(71.885, tr3.getDistance(), 0.001);
+        assertEquals("2014-06-01T09:14:18Z", tr3.getTimestamp());
+        assertEquals(801.6, tr3.getElevationGain(), 0.001);
+        
+    } 
     
     @Test
     public void test_add_to_track() throws  IOException, GPSException  {

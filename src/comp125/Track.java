@@ -10,7 +10,10 @@ public class Track {
 
     }
     
-    public int size() { 
+    public Track() {
+	}
+
+	public int size() { 
     	
     }
     
