@@ -19,7 +19,7 @@ public class TrackLogTest {
 		// the order of values a fuller test would be more complex
 		// so we'll rely on later tests of sort to verify that
 		// all required elements are being read in ok
-		assertEquals(8, tl.size());
+		assertEquals(22, tl.size());
 		
 	}
 
