@@ -16,8 +16,8 @@ public class TrackClimbsTest {
         Track bobbin = new Track("data/bobbin-head.csv"); 
 
         // find climbs over 3km
-        // ArrayList<Track> climbs = bobbin.findClimbs(3.0);
-        TrackLog climbs = bobbin.findClimbs(3.0);
+        ArrayList<Track> climbs = bobbin.findClimbs(3.0);
+        
         
         // check that there are three climbs in the result
         assertEquals(3, climbs.size());
